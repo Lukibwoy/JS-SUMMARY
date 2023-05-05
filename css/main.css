@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 0.8rem;
+}
+
+table {
+  border: 3px solid black;
+}
+table tr th {
+  border: 2px solid black;
+  width: 200px;
+  text-align: center;
+  background-color: rgb(199, 199, 199);
+}
+table tr td {
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+}
+table td button {
+  margin: 0 5px;
+  border: 1px solid black;
+}
+
+.colorInput {
+  margin-top: 100px;
+  width: 500px;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin-top: 30px;
+}
+
+.search-Btn {
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.search {
+  margin-top: 50px;
+}
+
+#colors {
+  margin-top: 20px;
+}
+#colors li {
+  list-style: none;
+  margin: 2px;
+}
+
+.lego {
+  margin-top: 300px;
+  width: 900px;
+  height: 750px;
+  border: 1px solid white;
+  background-image: url("https://www.lego.com/cdn/cs/set/assets/blt5040546f8d1c4614/10276_alt3.jpg?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.zoom {
+  transform: scale(1.4);
+  cursor: grab;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+.meet-calendar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numbers {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.convert {
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.output span {
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */
