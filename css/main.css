@@ -14,11 +14,15 @@ body {
   align-items: center;
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 30px;
   font-size: 0.8rem;
 }
 
@@ -29,16 +33,24 @@ table tr th {
   border: 2px solid black;
   width: 200px;
   text-align: center;
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(190, 130, 130);
 }
 table tr td {
   height: 30px;
   border: 1px solid black;
   text-align: center;
 }
-table td button {
-  margin: 0 5px;
-  border: 1px solid black;
+table tbody button {
+  margin-right: 10px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+#deleteSelectedButton {
+  margin-top: 10px;
+  right: 80%;
+  padding: 3px;
+  border-radius: 8px;
 }
 
 .colorInput {
@@ -95,6 +107,7 @@ h2 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 80%;
 }
 
 .numbers {
@@ -113,4 +126,63 @@ h2 {
 
 .output span {
   font-weight: bold;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 5px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s filter;
+}
+
+.gallery .photo-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .author-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery .photo-container:hover .author-name {
+  opacity: 1;
+}
+
+.events {
+  margin-top: 50px;
+}
+.events table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+.events th,
+.events td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.events th {
+  background-color: #f2f2f2;
+}
+.events #navigation-buttons {
+  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */

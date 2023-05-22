@@ -33,7 +33,7 @@ Klient nie udostępnił nam swojego API, więc skorzystaj z API https://jsonplac
 W polu action dodaj przycisk usuń i zaloguj w konsoli (usuń odnosi się do komentarza, jaki chcesz usunąć). Dodaj możliwość wyszukiwania w tabeli za pomocą inputów wyszukujących po polach name, email i body.
 Dodaj możliwość zaznaczania kilku wierszy i przycisk do usuwania zaznaczonych.
  -->
-
+  <h2>Comments</h2>
   <div class="container">
 
     <table>
@@ -46,15 +46,10 @@ Dodaj możliwość zaznaczania kilku wierszy i przycisk do usuwania zaznaczonych
         </tr>
       </thead>
       <tbody>
-        <!-- <tr>
-          <td>X Y</td>
-          <td>x@mail.com</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td><button>Edit</button> <button>Delete</button></td>
-        </tr> -->
       </tbody>
     </table>
   </div>
+  <button id="deleteSelectedButton">Delete Selected</button>
 
 
 
@@ -86,23 +81,25 @@ Story:
 Na mojej stronie fotograficznej obecnie pokazuję galerię wykonanych zdjęć (kafelki na całej stronie obok siebie o stałych rozmiarach). Chciałbym aby za każdym odświeżeniem strony do galerii ładowały się inne zdjęcia, a rozmiary kafelków generowały się dynamicznie. Po najechaniu myszą na zdjęcie wyświetlał się nazwa autora zdjęcia.
 
 Podpowiedź:
-Wykorzystaj Grida i jego zaawansowane właściwości do dopasowania kwadratów, tak aby zajmowały jak największą przestrzeń na stronie. Do załadowania przykładowych zdjęć wykorzystaj api unsplash Unsplash API Documentation | Free HD Photo API 
+ Wykorzystaj Grida i jego zaawansowane właściwości do dopasowania kwadratów, tak aby zajmowały jak największą przestrzeń na stronie. Do załadowania przykładowych zdjęć wykorzystaj api unsplash Unsplash API Documentation | Free HD Photo API  -->
 
--->
 
-  <!-- <div class="grid-container"></div> -->
+  <h2></h2>
+  <div class="gallery"></div>
+
+
+
 
   <!-- Zad. 4
 Story:
 W naszej wewnętrznej aplikacji mamy wiele formularzy, które generujemy na bieżąco za pomocą edytora. Generowanie formularza za pomocą edytora zajmuje nawet kilka godzin, a potrzebujemy ich jak najszybciej. Chcielibyśmy otrzymać rozwiązanie, które pozwoli na szybkie tworzenie dynamicznych formularzy na podstawie parametrów konfiguracyjnych.
 Podpowiedź:
-Stwórz funkcję, która zamieni podanego jej JSONa w formularz, który następnie pojawi się na stronie. JSON powinien zawierać nazwę pola jego typ i walidację. Stwórz funkcję, która na podstawie walidacji stworzy do formularza przycisk i będzie decydować czy może go wysłać dalej czy nie i wskaże które pola są nieprawidłowo wypełnione.
+Stwórz funkcję, która zamieni podanego jej JSONa w formularz, który następnie pojawi się na stronie. JSON powinien zawierać nazwę pola jego typ i walidację. Stwórz funkcję, która na podstawie walidacji stworzy do formularza przycisk i będzie decydować czy może go wysłać dalej czy nie i wskaże które pola są nieprawidłowo wypełnione. -->
 
 
 
 
-
-Zad. 5 
+  <!-- Zad. 5 
 Story:
 Nasza firma chciałaby otrzymać możliwość oglądania produktu za pomocą lupki tak jak w sklepie lego Koloseum 10276 | Creator Expert | Oficjalnym sklepie LEGO® PL. Po kliknięciu zdjęcie powiększy się i będzie można przesuwać się po nim.
 
@@ -112,143 +109,42 @@ Wykorzystaj manipulowanie background position oraz obserwowanie pozycji myszy po
 
   <div class="lego"></div>
 
-<!-- Zad. 6
+  <!-- Zad. 6
 	Story:
 Klient zapisuje spotkania ze swoimi kontrahentami w bazie danych w odpowiednich godzinach. Brakuje mu możliwości wyświetlania spotkań na jednym widoku. Przygotuj tablicę obiektów, która będzie przechowywała godzinę, dzień, nazwę i dane kontrahenta w tabeli spotkań. Zainspiruj się widokiem poniżej. Obok nazwy dnia powinna wyświetlać się data. Domyślnie wyświetla się bieżący tydzień. Na dole dodaj przyciski do przełączania pomiędzy tygodniami.
  -->
 
-<div class="meet-calendar">
-  <h2>Kalendarz spotkań</h2>
+  <div class="events">
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Dzień</th>
+          <th>Godzina</th>
+          <th>Nazwa spotkania</th>
+          <th>Klient</th>
+        </tr>
+      </thead>
+      <tbody id="calendar"></tbody>
+    </table>
+    <div id="navigation-buttons">
+      <button id="previous-week-button">Poprzedni tydzień</button>
+      <button id="next-week-button">Następny tydzień</button>
+    </div>
+  </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>GODZ.</th>
-        <th>PONIEDZIAŁEK</th>
-        <th>GODZ.</th>
-        <th>WTOREK</th>
-        <th>GODZ.</th>
-        <th>ŚRODA</th>
-        <th>GODZ.</th>
-        <th>CZWARTEK</th>
-        <th>GODZ.</th>
-        <th>PIĄTEK</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
- 
-    </tbody>
-  </table>
-</div>
-</div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
 
   </script>
